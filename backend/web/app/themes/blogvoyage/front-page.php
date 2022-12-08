@@ -11,6 +11,16 @@ $the_query = new WP_Query([
 ]);
 ?>
 
+<body>
+<?php get_template_part('template_parts/header_menu') ?>
+  <div class="front-page__header">
+
+  </div>
+
+<footer>
+
+</footer>
+
 <?php
 get_footer();
 ?>
