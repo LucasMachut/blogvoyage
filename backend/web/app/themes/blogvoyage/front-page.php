@@ -36,30 +36,55 @@ $the_query = new WP_Query([
     </div>
 
     <div class="last-articles-container">
-      <h3>Derniers articles</h3>
-      <div class="last-articles-container__items-container">
-        <div class="last-article-container__item">
-          <img src="./assets/img/colibri.jpg" alt="">
-          <h4>Le titre</h4>
-          <p class="summary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis impedit a at id rerum quidem, voluptatum mollitia saepe blanditiis hic?</p>
-        </div>
-        <div class="last-article-container__item">
-          <img src="./assets/img/colibri.jpg" alt="">
-          <h4>Le titre</h4>
-          <p class="summary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis impedit a at id rerum quidem, voluptatum mollitia saepe blanditiis hic?</p>
-        </div>
-        <div class="last-article-container__item">
-          <img src="./assets/img/colibri.jpg" alt="">
-          <h4>Le titre</h4>
-          <p class="summary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis impedit a at id rerum quidem, voluptatum mollitia saepe blanditiis hic?</p>
-        </div>
+      <h2 id="title-last-article">Derniers articles</h2>
+      <div class="post-gallery">
+      <?php if($the_query->have_posts()) : ?>
+        <?php while($the_query->have_posts()) : ?>
+          <?php $the_query->the_post() ?>
+          <article class="post">
+            <img class="post-image" src="<?= has_post_thumbnail() ? the_post_thumbnail_url() : "https://picsum.photos/1000/900?random=1" ?>">
+            <h3 class="post-title"><?php the_title() ?></h3>
+            <p class="post-excerpt"><?= get_the_excerpt() ?></p>
+            <a href="<?php the_permalink() ?>" class="post__link">Lire la suite</a>
+          </article>
+        <?php endwhile; ?>
+      <?php endif; ?>
       </div>
-      <div class="all-articles-button">
+
+
+      <div id="all-articles-button">
         <a href="#">
           <h3>Voir tous les articles</h3>
         </a>
       </div>
     </div>
+
+    <div class="banner-photos-insta">
+        <div class="banner-photos-insta__container">
+          <div class="banner-photos-insta__item">
+            <img src="<?= get_template_directory_uri() . '/assets/img/colibri.jpg' ?>" alt="">
+          </div>
+          <div class="banner-photos-insta__item">
+            <img src="<?= get_template_directory_uri() . '/assets/img/colibri.jpg' ?>" alt="">
+          </div>
+          <div class="banner-photos-insta__item">
+            <img src="<?= get_template_directory_uri() . '/assets/img/colibri.jpg' ?>" alt="">
+          </div>
+          <div class="banner-photos-insta__item">
+            <img src="<?= get_template_directory_uri() . '/assets/img/colibri.jpg' ?>" alt="">
+          </div>
+          <div class="banner-photos-insta__item">
+            <img src="<?= get_template_directory_uri() . '/assets/img/colibri.jpg' ?>" alt="">
+          </div>
+          <div class="banner-photos-insta__item">
+            <img src="<?= get_template_directory_uri() . '/assets/img/colibri.jpg' ?>" alt="">
+          </div>
+        </div>
+        <h3>Suivez-moi sur instagram !</h3>
+        <h4 id="link-insta">
+          <a href="#">@Lkts_s</a>
+        </h4>
+      </div>
   </main>
 
 <footer>
