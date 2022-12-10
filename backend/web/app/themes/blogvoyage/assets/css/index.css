@@ -30,17 +30,19 @@ h3{
 li {
   list-style-type: none;
 }
-a:link{
+a:link, a:visited{
   text-decoration: none;
   color: #bcbcbc;
 }
+
+
 
 /************HEADER***********/
 .menu{
   display: flex;
   width: 100%;
   height: 20vh;
-  background-color: #2d2b4d62;
+  background-color: #12111f;
 }
 nav ul{
   width: 100%;
@@ -129,7 +131,7 @@ nav ul{
   transition: all 1s ease-out;
 }
 
-
+/***********BANNER INSTA***********/
 .banner-photos-insta{
   display: flex;
   justify-content: center;
@@ -149,4 +151,48 @@ nav ul{
 }
 .banner-photos-insta__item img{
   width: 100%;
+}
+
+
+
+/***********HOME***********/
+.home-title{
+  margin-top:20vh;
+}
+.article-exerpt-item{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+}
+.article-exerpt-img{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article-exerpt-img img{
+  width: 80%;
+}
+.article-exerpt-infos{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+/***********SINGLE***********/
+.single-post-img{
+  width: 100%;
+  height: 80vh;
+  margin: 15vh 0 15vh 0;
+}
+.single-post-img img{
+  height: 100%;
+}
+.single-post-content{
+  margin: 10vh 15% 10vh 15%;
+}
+.single-post-meta{
+  display: flex;
+  justify-content: right;
 }

@@ -51,12 +51,10 @@ $the_query = new WP_Query([
       <?php endif; ?>
       </div>
 
-
-      <div id="all-articles-button">
-        <a href="#">
+      <a href="#" id="all-articles-button">
           <h3>Voir tous les articles</h3>
-        </a>
-      </div>
+      </a>
+      
     </div>
 
     <div class="banner-photos-insta">
