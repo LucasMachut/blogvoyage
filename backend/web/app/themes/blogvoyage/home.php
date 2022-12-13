@@ -10,6 +10,7 @@ get_header(); ?>
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): ?>
                     <?php the_post(); ?>
+
                     <a href="<?php the_permalink() ?>">
                         <article class="article-exerpt-item">
                             <div class="article-exerpt-img">
@@ -21,6 +22,7 @@ get_header(); ?>
                             </div>
                         </article>
                     </a>
+
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
