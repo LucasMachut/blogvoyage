@@ -50,20 +50,14 @@ $the_query = new WP_Query([
         <?php endwhile; ?>
       <?php endif; ?>
       </div>
-
       <a href="#" id="all-articles-button">
           <h3>Voir tous les articles</h3>
       </a>
-      
     </div>
-
-    <?php get_template_part('template_parts/banner_insta') ?>
-
-   
   </main>
 
 <footer>
-
+  <?php get_template_part('template_parts/insta-banner') ?>
 </footer>
 
 <?php

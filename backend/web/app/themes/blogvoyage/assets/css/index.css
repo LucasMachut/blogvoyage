@@ -140,11 +140,12 @@ nav ul{
   margin: 10rem 0;
 }
 .banner-photos-insta__container{
-  height: 40vh;
+  height: 350px;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
+  margin: 5vh 0;
 }
 .banner-photos-insta__item{
   width: 19.5%;
