@@ -1,7 +1,8 @@
 <?php
 get_header();
-?>
-<body>
+the_terms( get_the_ID() , 'portraits' ); ?>
+
+
 <body>
     <?php get_template_part('template_parts/header_menu') ?>
     <main>

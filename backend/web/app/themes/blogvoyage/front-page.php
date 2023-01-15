@@ -15,11 +15,9 @@ $the_query = new WP_Query([
 <?php get_template_part('template_parts/header_menu') ?>
   <div class="header-container" style="background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?= get_template_directory_uri() . '/assets/img/banner.jpg' ?>) fixed 50% 50%;">
     <div class="header-infos">
-      <h1>
-        Lucas Machut
-      </h1>
+      <h1>Voir Ailleurs</h1>
       <div id="line"></div>
-      <h2>Blog de voyage</h2>
+      <h2>Voir Ailleurs</h2>
       </div>
     </div>
   </div>
@@ -41,17 +39,17 @@ $the_query = new WP_Query([
       <?php if($the_query->have_posts()) : ?>
         <?php while($the_query->have_posts()) : ?>
           <?php $the_query->the_post() ?>
-          <article class="post">
-            <img class="post-image" src="<?= has_post_thumbnail() ? the_post_thumbnail_url() : "https://picsum.photos/1000/900?random=1" ?>">
-            <h3 class="post-title"><?php the_title() ?></h3>
-            <p class="post-excerpt"><?= get_the_excerpt() ?></p>
-            <a href="<?php the_permalink() ?>" class="post__link">Lire la suite</a>
-          </article>
+          <a href="<?php the_permalink() ?>" class="post_link">
+            <article class="post">
+              <img class="post-image" src="<?= has_post_thumbnail() ? the_post_thumbnail_url() : "https://picsum.photos/1000/900?random=1" ?>">
+              <h3 class="post-title"><?php the_title() ?></h3>
+            </article>
+          </a>
         <?php endwhile; ?>
       <?php endif; ?>
       </div>
       <a href="#" id="all-articles-button">
-          <h3>Voir tous les articles</h3>
+          <h4>Voir tous les articles</h4>
       </a>
     </div>
   </main>
